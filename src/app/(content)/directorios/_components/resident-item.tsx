@@ -1,4 +1,3 @@
-import ResidentItem from "@/app/(dashboard)/admin/directory/_components/directory-resident-item"
 import { toCamelCase } from "@/lib/textFn"
 import { ResidentItemProps } from "@/lib/types"
 import { AtSign, Mail, PhoneCall } from "lucide-react"

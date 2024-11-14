@@ -4,8 +4,8 @@ import Link from "next/link";
 import DirectorySearch from "./client-search-directory";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import { DirectoryListType } from "@/app/lib/types/house";
-import { DirectoryItem } from "./directory-item";
+import { DirectoryListType } from "@/lib/types";
+import DirectoryItem from "./directory-item copy";
 import { Frown } from "lucide-react";
 
 export default function ClientDirectoryList({directoryData}:DirectoryListType){
@@ -28,11 +28,12 @@ export default function ClientDirectoryList({directoryData}:DirectoryListType){
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-6">
                 {filteredDirectories.length > 0 ? (
-                    filteredDirectories.map((directory) => (
+                    filteredDirectories.map((directory,index) => (
                         <DirectoryItem 
                             key={directory.identifier}
                             residents={directory.residents}
                             identifier={directory.identifier}
+                            index={index}
                         />
                     ))
                 ):(

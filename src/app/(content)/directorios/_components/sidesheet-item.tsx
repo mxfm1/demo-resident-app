@@ -1,4 +1,3 @@
-import SideSheetItem from "@/app/(dashboard)/admin/directory/_components/resident-sidesheet-item"
 import { toCamelCase } from "@/lib/textFn"
 import { ResidentType } from "@/lib/types"
 import { Button } from "@/components/ui/button"
