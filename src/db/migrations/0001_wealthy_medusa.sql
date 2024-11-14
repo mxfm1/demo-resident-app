@@ -1,0 +1,1 @@
+ALTER TABLE "residentTable" ADD COLUMN "lastName" text;
