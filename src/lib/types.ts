@@ -1,3 +1,6 @@
+export type UserId = number
+
+
 export type createHouseDirectoryProp = {
     houseId: string,
     name: string
