@@ -1,6 +1,6 @@
 'use client'
 
-import { DirectoryListType } from "@/app/lib/types/house"
+import { DirectoryListType } from "@/lib/types"
 import AdminHeadWrapper from "@/components/admin-page-header"
 import ClientDirectoryList from "./client-directory-list"
 import { useQuery } from "@tanstack/react-query"
