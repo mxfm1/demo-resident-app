@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { Roboto } from 'next/font/google'
 import "./globals.css";
 import Provider from "@/lib/provider";
@@ -13,6 +12,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "App condominio Feliz",
   description: "Aplicación demo para uso local..",
+  icons: "/logo-new.png"
 };
 
 
