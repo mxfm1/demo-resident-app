@@ -36,6 +36,20 @@ export const hashPassword = async(plaintextPassword:string,salt:string) => {
 //       .returning();
 //     return account;
 //   }
+
+export async function createAccount(userId:number,password:string){
+    const salt = crypto.randomBytes(128).toString("base64")
+    const hash = await hashPassword(password,salt)
+    const [account] = await database.insert(accounts).values({
+        userId:userId,
+        accountType: 'email',
+        password: "123",
+        salt:"1234"
+    }).returning()
+
+    return account
+}
+
 export const getAccountByUserId = async(userId:number) => {
     const account = await database.query.accounts.findFirst({
         where: eq(accounts.userId,userId)

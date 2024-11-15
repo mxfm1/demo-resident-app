@@ -56,7 +56,7 @@ export default function AddDirectory(){
                             )}
                         >
                             <p className="text-center font-xs font-light mx-auto">
-                                Valida que la propiedad no este registrada previamente..
+                                Para registrar una propiedad primero debes validar que no exista previamente..
                             </p>
                             <DirectoryAvailableSearch 
                                 setIdentifier={setIdentifier}
