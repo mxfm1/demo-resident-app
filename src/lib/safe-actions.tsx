@@ -23,7 +23,7 @@ function shape_errors({err}:any){
     }else{
         return {
             code: "ERROR",
-            message: err.message
+            message: "Upss hubo un error, intenta más tarde.."
         }
     }
 }
