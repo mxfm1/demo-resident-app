@@ -20,13 +20,10 @@ function shape_errors({err}:any){
         //         ${err.message}
         //     `
         // }
-        return {
-            error: err.message
-        }
     }else{
         return {
             code: "ERROR",
-            message: "Something went wrong"
+            message: err.message
         }
     }
 }

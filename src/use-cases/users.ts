@@ -18,14 +18,11 @@ export const userRegistrationUseCase = async(email:string,password:string,name:s
 
 export const userLoginUseCase = async(email:string,password:string) => {
     const user = await getUserByEmail(email)
-
-    console.log("USER BY EMAIL", user)
     if(!user){
         throw new LoginError()
     }
     const isValidPassword = await verifyPassword(email, password)
     if(!isValidPassword){
-        console.log("PASSWORD NO VALIDA")
         throw new LoginError()
     }
 

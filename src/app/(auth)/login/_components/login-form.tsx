@@ -29,7 +29,6 @@ export default function LoginForm(){
     const {execute, isPending, error} = useServerAction(userLoginAction)
 
     const handleFormSubmit = (values: z.infer <typeof loginSchema>) => {
-        console.log("FORM VALUES",values)
         execute(values)
     }
 
