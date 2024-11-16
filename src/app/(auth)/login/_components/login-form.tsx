@@ -95,6 +95,7 @@ export default function LoginForm(){
                 {error && (
                     <div className="flex text-red-500 absolute">
                         <Terminal />
+                        {error.code}
                         {error.message}
                     </div>
                 )}
