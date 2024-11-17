@@ -29,8 +29,9 @@ export const verifyPassword = async(email:string,plainTextPassword:string) => {
         return false
     }
 
+    
     const salt = account.salt
-    const password = account.password
+    const password = account.password  
 
     if(!salt || !password){
         return false

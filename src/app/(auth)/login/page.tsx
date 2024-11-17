@@ -7,7 +7,7 @@ export default async function LoginPage(){
 
     const user = await getCurrentUser()
     if(user){
-        redirect("/inicio")
+        return redirect("/inicio")
     }
     return (
         <LoginFormWrapper>

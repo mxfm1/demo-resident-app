@@ -25,6 +25,10 @@ const formSchema = z.object({
 export default function PropertyRegisterForm({identifier,changeFormDisplay}:{identifier:string |undefined,changeFormDisplay: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void}){
 
     const { toast } = useToast()
+
+    // AGREGAR UN TOAST MEJOR EN CASO DEL ERROR DE MAX REGISTROS X PERSONA
+    // TIMER EN EL TOAST
+    //SE PUEDE VACIAR LOS CAMPOS DEL FORMULARIO DESPUES DE QUE LA ACCION FUE EXITOSA??
     const {execute, isPending, error} = useServerAction(addPropertyResidents,{
         onSuccess(){
             toast({
